@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Memorama de Animales</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🌍 Aventura en los Biomas del Mundo 🌎</h1>
+            <p>¡Explora los ecosistemas más fascinantes de nuestro planeta!</p>
+        </div>
+
+        <div class="score-board">
+            <div class="score-item">
+                ⭐ Puntaje: <span id="score">0</span>/80
+            </div>
+            <div class="score-item">
+                🌱 Bioma: <span id="current">1</span>/8
+            </div>
+            <div class="score-item">
+                ✅ Correctas: <span id="correct">0</span>
+            </div>
+        </div>
+
+        <div class="progress-container">
+            <div class="progress-bar">
+                <div class="progress-fill" id="progressFill">0%</div>
+            </div>
+        </div>
+
+        <div class="game-area">
+            <div id="questionArea">
+                <div class="biome-card" id="biomeCard">
+                    <div class="biome-header">
+                        <div class="biome-icon" id="biomeIcon">🏔️</div>
+                        <div class="biome-name" id="biomeName">Tundra</div>
+                    </div>
+                    <div class="biome-description" id="biomeDescription"></div>
+                    
+                    <div class="question-section">
+                        <div class="question-text" id="questionText"></div>
+                        <div class="options-grid" id="optionsGrid"></div>
+                        <div class="feedback-box" id="feedbackBox">
+                            <div class="feedback-icon" id="feedbackIcon"></div>
+                            <div id="feedbackText"></div>
+                        </div>
+                        <button class="next-btn" id="nextBtn" onclick="nextBiome()">Siguiente Bioma ➡️</button>
+                    </div>
+                    
+                    <div class="fun-fact" id="funFact"></div>
+                </div>
+            </div>
+
+            <div class="final-screen" id="finalScreen">
+                <h2>🎉 ¡Felicitaciones, Explorador! 🎉</h2>
+                <div class="achievement-badge" id="badge">
+                    🏆 Explorador Experto
+                </div>
+                <div class="final-stats">
+                    <div class="stat-row">
+                        ⭐ Puntaje Final: <span id="finalScore"></span>/80
+                    </div>
+                    <div class="stat-row">
+                        ✅ Respuestas Correctas: <span id="finalCorrect"></span>/8
+                    </div>
+                    <div class="stat-row">
+                        🌍 Biomas Explorados: 8/8
+                    </div>
+                </div>
+                <p style="font-size: 1.3em; color: #333; margin: 20px 0;">
+                    ¡Has completado tu viaje por los biomas del mundo! Ahora conoces mejor los ecosistemas de nuestro planeta.
+                </p>
+                <button class="restart-btn" onclick="restartGame()">🔄 Nueva Aventura</button>
+            </div>
+        </div>
+    </div>
+
+
+
+     <script src="script.js"></script>
+    
+</body>
+</html>
